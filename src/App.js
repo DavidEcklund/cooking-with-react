@@ -9,7 +9,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ backgroundColor: theme }}>
       Counter
-      <Counter initialCount={0} />
+      <Counter initialCount={5} />
       Counter Hooks
       <CounterHooks initialCount={0} />
       <button onClick={() => setTheme(prevTheme => {
