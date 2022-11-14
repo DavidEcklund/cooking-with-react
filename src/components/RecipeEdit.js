@@ -23,7 +23,13 @@ export default function RecipeEdit({recipe}) {
       name: '',
       amount: ''
     }
-    handleChange({ ingredients: [...recipe.ingredients, newIngredient]})
+    handleChange({ 
+      ingredients: [...recipe.ingredients, newIngredient]
+    })
+  }
+
+  function handleIngredientDelete(id) {
+    handleChange({ ingredients: recipe.ingredients.filter(i => i.id !== id)})
   }
 
   return (
@@ -96,6 +102,7 @@ export default function RecipeEdit({recipe}) {
           <RecipeIngredientEdit
             key={ingredient.id}
             handleIngredientChange={handleIngredientChange}
+            handleIngredientDelete={handleIngredientDelete}
             ingredient={ingredient}
             />
           ))}
