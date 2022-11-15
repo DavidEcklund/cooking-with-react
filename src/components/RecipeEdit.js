@@ -101,7 +101,7 @@ export default function RecipeEdit({recipe}) {
         {recipe.ingredients.map(ingredient => (
           <RecipeIngredientEdit
             key={ingredient.id}
-            handleIngredientChange={handleIngredientChange}
+            handleIngredientChange={handleIngredientChange}  // only one level parent -> one child, thus props passing and no context
             handleIngredientDelete={handleIngredientDelete}
             ingredient={ingredient}
             />

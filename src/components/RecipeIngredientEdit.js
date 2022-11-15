@@ -18,7 +18,7 @@ export default function RecipeIngredientEdit(props) {
         type="text" 
         onChange={(e) => handleChange({ name: e.target.value})}
         value={ingredient.name}
-        />
+      />
       <input 
         className='recipe-edit__input' 
         type="text" 
